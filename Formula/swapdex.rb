@@ -1,24 +1,24 @@
 class Swapdex < Formula
-  desc "Switch between multiple Claude Code, Codex, and Gemini CLI login accounts, locally and safely"
+  desc "Switch between multiple Claude Code, Codex, Gemini, and Antigravity login accounts, locally and safely"
   homepage "https://github.com/youdie006/swapdex"
-  version "0.5.0"
+  version "0.6.0"
   license "MIT"
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/youdie006/swapdex/releases/download/v0.5.0/swapdex-aarch64-apple-darwin.tar.gz"
-      sha256 "02846c14adcf6a912f4028e8615c6be3bddb7399e39847973968db1a8e80f8df"
+      url "https://github.com/youdie006/swapdex/releases/download/v0.6.0/swapdex-aarch64-apple-darwin.tar.gz"
+      sha256 "6508649b4e9cb39fce16fc02d66652eff31c62859304fb66a15409fdd04447af"
     else
-      url "https://github.com/youdie006/swapdex/releases/download/v0.5.0/swapdex-x86_64-apple-darwin.tar.gz"
-      sha256 "4fddc30e7ca716ad8e325f5e6131847e32a16b0da18f0aae10f1cb5ec38d8e53"
+      url "https://github.com/youdie006/swapdex/releases/download/v0.6.0/swapdex-x86_64-apple-darwin.tar.gz"
+      sha256 "b1dbf46e598713d4c9059e10615339b2cd1400b5a60fa4367d0046fa8879dcc9"
     end
   end
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/youdie006/swapdex/releases/download/v0.5.0/swapdex-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "f6b4ec7a35d31780d37fd743a55edd92b4963ffb49d17e298ba0cbc45903efba"
+      url "https://github.com/youdie006/swapdex/releases/download/v0.6.0/swapdex-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "fc41dc5e76976ea372bf8abd9f15f3e3639ff49d53ab5ba2fef071c02c95a8b0"
     else
-      url "https://github.com/youdie006/swapdex/releases/download/v0.5.0/swapdex-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "41e4c047df72a612502124b1a50f5b9de95563b7097b0c3c5953823d7d67fcf0"
+      url "https://github.com/youdie006/swapdex/releases/download/v0.6.0/swapdex-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "b481beb860935c04eff79569d1600118f175869ed68b2c26f78852a2b8fad08c"
     end
   end
   def install
@@ -28,6 +28,6 @@ class Swapdex < Formula
     man1.install "swapdex.1"
   end
   test do
-    assert_match "swapdex 0.5.0", shell_output("#{bin}/swapdex --version")
+    assert_match "swapdex 0.6.0", shell_output("#{bin}/swapdex --version")
   end
 end
