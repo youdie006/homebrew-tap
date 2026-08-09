@@ -1,24 +1,24 @@
 class Swapdex < Formula
   desc "Switch between multiple Claude Code, Codex, Gemini, and Antigravity login accounts, locally and safely"
   homepage "https://github.com/youdie006/swapdex"
-  version "0.40.0"
+  version "0.40.1"
   license "MIT"
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/youdie006/swapdex/releases/download/v0.40.0/swapdex-aarch64-apple-darwin.tar.gz"
-      sha256 "66ed52f4c9b0434462bc0bf73ed45896ec710117944abe1e8c46c9d1440009b8"
+      url "https://github.com/youdie006/swapdex/releases/download/v0.40.1/swapdex-aarch64-apple-darwin.tar.gz"
+      sha256 "7b744f3eba0e48ff747abe873701bc2d14bc055f041d0e537f758512f4b8603d"
     else
-      url "https://github.com/youdie006/swapdex/releases/download/v0.40.0/swapdex-x86_64-apple-darwin.tar.gz"
-      sha256 "7e49850b168910aa91c5c5b9656e5aa5621fc2a1ae4ea612c2edb64cd25b5cab"
+      url "https://github.com/youdie006/swapdex/releases/download/v0.40.1/swapdex-x86_64-apple-darwin.tar.gz"
+      sha256 "80efec8fe928a25fcd9d6080eeed0629b32be66384ba9efc063e84fddc86ca89"
     end
   end
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/youdie006/swapdex/releases/download/v0.40.0/swapdex-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "da95893e5143747171cb52fc49dad9d02378f251e0e27c0d23c01a7ce19fbad3"
+      url "https://github.com/youdie006/swapdex/releases/download/v0.40.1/swapdex-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "5bb95ff114b62dbb389ae2c5fb2ea5b20a5c7e25370cbc9e1abb30d2a80d1382"
     else
-      url "https://github.com/youdie006/swapdex/releases/download/v0.40.0/swapdex-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "040072ff117dfb39da59f8f2e3da22232865a34810ae6b1b1efd5559ae0dc98c"
+      url "https://github.com/youdie006/swapdex/releases/download/v0.40.1/swapdex-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "340e34889b1ee35057533c3b44f749f8f65d49d95548594fe05616b58d15ba46"
     end
   end
   def install
@@ -28,6 +28,6 @@ class Swapdex < Formula
     man1.install "swapdex.1"
   end
   test do
-    assert_match "swapdex 0.40.0", shell_output("#{bin}/swapdex --version")
+    assert_match "swapdex 0.40.1", shell_output("#{bin}/swapdex --version")
   end
 end
