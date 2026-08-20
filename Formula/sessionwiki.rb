@@ -1,22 +1,22 @@
 class Sessionwiki < Formula
   desc "Find, search, and resume every AI coding session on your machine"
   homepage "https://github.com/youdie006/sessionwiki"
-  version "0.23.0"
+  version "0.24.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/youdie006/sessionwiki/releases/download/v0.23.0/sessionwiki-v0.23.0-aarch64-apple-darwin.tar.gz"
-      sha256 "bb93145f27805ce96356718b6ee33af4111f38b904c125e49b25755f526ba3d5"
+      url "https://github.com/youdie006/sessionwiki/releases/download/v0.24.0/sessionwiki-v0.24.0-aarch64-apple-darwin.tar.gz"
+      sha256 "f055c14b7a8bd039ecb19cced61faffe9d3ff38e5d6ea9b93adfea3ded43f71b"
     else
-      url "https://github.com/youdie006/sessionwiki/releases/download/v0.23.0/sessionwiki-v0.23.0-x86_64-apple-darwin.tar.gz"
-      sha256 "d3ff92cd6cb02119c9e2493133e575d2892d214434943caed339c7a999bc842d"
+      url "https://github.com/youdie006/sessionwiki/releases/download/v0.24.0/sessionwiki-v0.24.0-x86_64-apple-darwin.tar.gz"
+      sha256 "4040c78629c1ed970c9f6156c0c39a0f950c166f39a999a9d8876a69b6212b0c"
     end
   end
 
   on_linux do
-    url "https://github.com/youdie006/sessionwiki/releases/download/v0.23.0/sessionwiki-v0.23.0-x86_64-unknown-linux-gnu.tar.gz"
-    sha256 "45010dca60762d6b554fc11c596956d645cd58fb6dc42be0b2953d74a41cc46d"
+    url "https://github.com/youdie006/sessionwiki/releases/download/v0.24.0/sessionwiki-v0.24.0-x86_64-unknown-linux-gnu.tar.gz"
+    sha256 "9ff3b9cbc829a739dcb8db8c9f3ee8b12206419bb24ee10a6784235b9bf6e53a"
   end
 
   def install
