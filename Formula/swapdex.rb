@@ -6,19 +6,19 @@ class Swapdex < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/youdie006/swapdex/releases/download/v0.75.0/swapdex-aarch64-apple-darwin.tar.gz"
-      sha256 "7687f62db4537651f84450f0d5984e83b8bc2ddd32642ef5457d11dac92f0177"
+      sha256 "377bfa7a324541a57610665d9cc289c2ab935f916111e3f846cdb9a48ab88c3e"
     else
       url "https://github.com/youdie006/swapdex/releases/download/v0.75.0/swapdex-x86_64-apple-darwin.tar.gz"
-      sha256 "23d3d888074df40d1c41b302fc912ba50ce93036bfcf37f3f3b19bc6f5630b42"
+      sha256 "66fddbdf02b1e1cb188a683e085b9a8241dbabb6158b9795d0890c0a78524735"
     end
   end
   on_linux do
     if Hardware::CPU.arm?
       url "https://github.com/youdie006/swapdex/releases/download/v0.75.0/swapdex-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "a1b49efa65ab61675852b3f0a4aae67f705acb09a832a3e6ca3b908a848926a3"
+      sha256 "20385b5aec3e28b82a42dc8e74ccaf3085ab55b2d1b001b1c9ae9958213d1f5c"
     else
       url "https://github.com/youdie006/swapdex/releases/download/v0.75.0/swapdex-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "9db6ba30f6cfc0064973db6c9c7f2d74ff1aa9435fb4c6eca5a0d274b2a8b5b0"
+      sha256 "5c35663d50b9cc2d5c886b21281e3591d22f900f1b6fb8aed07d44b68a95771e"
     end
   end
   def install
