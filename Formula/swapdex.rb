@@ -1,7 +1,7 @@
 class Swapdex < Formula
   desc "Switch between multiple Claude Code, Codex, Gemini, and Antigravity login accounts, locally and safely"
   homepage "https://github.com/youdie006/swapdex"
-  version "0.75.0"
+  version "0.96.0"
   license "MIT"
   on_macos do
     if Hardware::CPU.arm?
@@ -28,6 +28,6 @@ class Swapdex < Formula
     man1.install "swapdex.1"
   end
   test do
-    assert_match "swapdex 0.75.0", shell_output("#{bin}/swapdex --version")
+    assert_match "swapdex 0.96.0", shell_output("#{bin}/swapdex --version")
   end
 end
