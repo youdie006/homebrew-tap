@@ -1,5 +1,21 @@
 # Changelog
 
+## 2026-09-15: swapdex 0.162.0
+
+- Update swapdex 0.160.0 → 0.162.0 to restore Codex session search and resume
+  across account changes. The launcher keeps a stable provider and repairs old
+  provider metadata with private recovery backups while preserving conversations.
+- Include the native-login and renewal ownership fixes from 0.161.0.
+- Verify all four formula URLs and SHA-256 values against the official release
+  downloads and their published checksum files. Ruby syntax and diff checks
+  pass; the Linux binary reports 0.162.0 and its isolated repair preview succeeds.
+- Homebrew installation and macOS execution were not run on this WSL host,
+  which has no `brew` executable. Both upstream CI platforms and all four
+  release builds passed.
+- Upstream: [swapdex v0.162.0](https://github.com/youdie006/swapdex/releases/tag/v0.162.0),
+  source `72bf8020ffb9f82825ced5e5cc709911f49d08a6`,
+  [PR #29](https://github.com/youdie006/swapdex/pull/29).
+
 ## 2026-09-15: sessionwiki 0.28.0 and swapdex 0.160.0
 
 - Update sessionwiki 0.27.0 → 0.28.0 so large MCP turn responses remain valid
