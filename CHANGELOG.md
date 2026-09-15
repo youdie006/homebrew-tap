@@ -1,5 +1,29 @@
 # Changelog
 
+## 2026-09-15: swapdex 0.164.1
+
+- Update swapdex 0.163.0 → 0.164.1 so an older failing request cannot overwrite
+  a newer account selection, and accepted model POSTs are not replayed after an
+  ambiguous disconnect. Safe bodyless GET/HEAD retries also handle the macOS
+  `Peer disconnected` error.
+- Keep Codex user/workspace identities separate and coordinate copied refresh
+  tokens across processes. Reject stale refresh results after credentials change,
+  preserve future quota reset times, and prevent unreadable Claude slots from
+  reusing an older account's cached credential.
+- Preserve the launch home in generated swap commands, quote service paths,
+  resolve native executables consistently, and fix session search limits,
+  symlink cycles and timed-out search child processes.
+- Verify all four formula URLs and SHA-256 values against the official release
+  archives and checksum files. Ruby syntax and diff checks pass; the isolated
+  Linux x86_64 executable reports 0.164.1.
+- Homebrew installation was not run on this WSL host, which has no `brew`
+  executable. Upstream Linux/macOS CI and all four release builds passed.
+  The 0.164.0 validation candidate was superseded before package publication.
+- Upstream: [swapdex v0.164.1](https://github.com/youdie006/swapdex/releases/tag/v0.164.1),
+  source `cc864aaaeaa9ec8f251134ce9e90e51379b5b3ef`,
+  [PR #31](https://github.com/youdie006/swapdex/pull/31) and
+  [PR #33](https://github.com/youdie006/swapdex/pull/33).
+
 ## 2026-09-15: swapdex 0.163.0
 
 - Update swapdex 0.162.0 → 0.163.0 so Claude credential snapshots read the
