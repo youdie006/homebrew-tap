@@ -1,5 +1,22 @@
 # Changelog
 
+## 2026-09-16: swapdex 0.165.3
+
+- Update swapdex 0.165.2 → 0.165.3 so active responses continue beyond the
+  header deadline and available SSE headers, heartbeats and completion events
+  reach clients immediately. Failed streams close without successful framing;
+  healthy connections remain reusable.
+- Keep quota inspection read-only for credentials: expired tokens are reported
+  without OAuth renewal, credential writes or expired-token usage requests.
+- Verify all four official archive URLs/SHA-256 values and the Linux x86_64
+  executable version. Upstream PR and merged-source Linux/macOS CI, all four
+  release builds, 1,213 local Rust tests and a 305-second stream check pass.
+  Ruby syntax and formula mapping checks cover this update; target machines
+  use exact npm packages, so a full Homebrew installation is not claimed.
+- Upstream: [swapdex v0.165.3](https://github.com/youdie006/swapdex/releases/tag/v0.165.3),
+  source `9f01140b411d1690a0fa700842988d4c83d88b8c`,
+  [PR #37](https://github.com/youdie006/swapdex/pull/37).
+
 ## 2026-09-16: swapdex 0.165.2
 
 - Update swapdex 0.165.1 → 0.165.2 to remove client API-key headers from
