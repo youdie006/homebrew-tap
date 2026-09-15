@@ -1,5 +1,26 @@
 # Changelog
 
+## 2026-09-16: swapdex 0.165.1
+
+- Update swapdex 0.165.0 → 0.165.1: preserve literal fractional thresholds,
+  keep allowed Claude plans available with paid overage disabled, and use the
+  renewed credential on the first quota read for both slot layouts.
+- Preserve independent concurrent cache observations and settings on lock
+  failure. Report rotation causes from actual measurements/refusals.
+- Install Homebrew services with a verified stable opt path so removing the
+  previous Cellar version does not break their next launch. Upgrade fixtures
+  also cover path aliases, spaces, quotes and percent/XML characters.
+- Verify all four formula URLs/SHA-256 mappings against downloaded official
+  archives and checksum files. Upstream Linux/macOS PR and merged-source CI,
+  all four release builds, and local 1,192 Rust tests passed.
+- PASS Ruby formula syntax, diff checks and execution of the isolated Linux
+  x86_64 binary (`swapdex 0.165.1`). Real target installations use npm; a full
+  Homebrew installation is outside this verification.
+- Upstream: [swapdex v0.165.1](https://github.com/youdie006/swapdex/releases/tag/v0.165.1),
+  source `f3387a09544ae0a253525e2070baa0fb5f44d74a`,
+  [PR #35](https://github.com/youdie006/swapdex/pull/35).
+
+
 ## 2026-09-15: swapdex 0.165.0
 
 - Update swapdex 0.164.1 → 0.165.0 so Codex-only users can install their shim
