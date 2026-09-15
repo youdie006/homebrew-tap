@@ -1,5 +1,26 @@
 # Changelog
 
+## 2026-09-15: swapdex 0.165.0
+
+- Update swapdex 0.164.1 → 0.165.0 so Codex-only users can install their shim
+  and complete onboarding without Claude. Available clients get independent
+  setup and PATH checks; a later Codex installation preserves the existing
+  Claude shim during onboarding.
+- Document native login per account slot, shim activation, launch defaults and
+  next-request serving selection. Clarify existing-session relaunch and saved
+  snapshots instead of promising immediate switching from a direct session.
+- Preserve a working shell installation when a download, checksum, staging or
+  executable check fails; reject directory targets and quote custom PATH hints.
+- Verify all four formula URLs/SHA-256 values against the official release
+  archives and checksum files. Ruby syntax and diff checks pass, and the
+  isolated Linux x86_64 binary reports 0.165.0.
+- Upstream PR and post-merge Linux/macOS CI passed, including all six aliased
+  first-use autostart journeys; all four release builds passed. Homebrew itself
+  is unavailable on this WSL host, so a Homebrew installation was not run.
+- Upstream: [swapdex v0.165.0](https://github.com/youdie006/swapdex/releases/tag/v0.165.0),
+  source `2c5c57df4a89bd69b3311b066bd75f3ee288870f`,
+  [PR #34](https://github.com/youdie006/swapdex/pull/34).
+
 ## 2026-09-15: swapdex 0.164.1
 
 - Update swapdex 0.163.0 → 0.164.1 so an older failing request cannot overwrite
