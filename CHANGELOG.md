@@ -1,5 +1,19 @@
 # Changelog
 
+## 2026-09-16: swapdex 0.165.2
+
+- Update swapdex 0.165.1 → 0.165.2 to remove client API-key headers from
+  managed Claude/Codex requests. A stale client key no longer conflicts with
+  the selected OAuth bearer or incorrectly sidelines a healthy account.
+  Explicit passthrough and native authentication exchanges preserve client auth.
+- Verify all four official archive URLs/SHA-256 values, Ruby formula syntax,
+  diff checks and the Linux x86_64 native version. Upstream Linux/macOS PR
+  and merged-source CI, all four release builds and 1,198 local Rust tests pass.
+  A full brew install is outside this verification; WSL/M3 use exact npm packages.
+- Upstream: [swapdex v0.165.2](https://github.com/youdie006/swapdex/releases/tag/v0.165.2),
+  source `6f9e245efa1505782c9cd4ca00b9cd29fc21c1c7`,
+  [PR #36](https://github.com/youdie006/swapdex/pull/36).
+
 ## 2026-09-16: swapdex 0.165.1
 
 - Update swapdex 0.165.0 → 0.165.1: preserve literal fractional thresholds,
