@@ -1,5 +1,19 @@
 # Changelog
 
+## 2026-09-16: swapdex 0.165.4
+
+- Update swapdex 0.165.3 → 0.165.4 to keep a disconnected client from killing
+  the shared Claude/Codex proxy with SIGPIPE. Proxy workers report failed
+  writes normally; ordinary CLI output pipelines keep their existing behavior.
+- Verify all four official archive URLs and SHA-256 values. Upstream PR and
+  merged-source Linux/macOS CI, all four release builds, 1,217 local Rust tests,
+  executable disconnect/SIGPIPE regressions and installed-candidate checks pass.
+  Ruby syntax and exact formula mappings are checked here; target npm installs
+  and runtime verification are recorded in the upstream release ledger.
+- Upstream: [swapdex v0.165.4](https://github.com/youdie006/swapdex/releases/tag/v0.165.4),
+  source `1ec88432f43a4a21c9709b090037c763648ea83b`,
+  [PR #38](https://github.com/youdie006/swapdex/pull/38).
+
 ## 2026-09-16: swapdex 0.165.3
 
 - Update swapdex 0.165.2 → 0.165.3 so active responses continue beyond the
