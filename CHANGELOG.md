@@ -1,5 +1,29 @@
 # Changelog
 
+## 2026-09-15: swapdex 0.163.0
+
+- Update swapdex 0.162.0 → 0.163.0 so Claude credential snapshots read the
+  identity and credential from the same selected account. Managed children no
+  longer inherit a secure-storage override that can redirect them to another
+  account, and rooted library operations remain isolated from the machine
+  Keychain.
+- Stop managed Claude and Codex launches when proxy startup fails or returns an
+  invalid port, preventing fallback to a different native login. Actual Claude
+  auth commands and explicit provider choices still run directly, while prompt
+  text and option values cannot accidentally bypass account routing.
+- Send named-account login runs to the native executable and report a missing
+  native tool instead of recursively invoking the managed shim. Explicitly
+  release store, credential and registry locks when each account operation ends.
+- Verify all four formula URLs and SHA-256 values against the official release
+  downloads and their published checksum files. Ruby syntax and diff checks
+  pass; the isolated Linux x86_64 executable reports 0.163.0.
+- Homebrew installation and macOS or ARM64 execution were not run on this WSL
+  host, which has no `brew` executable. Upstream post-merge CI and all four
+  release builds passed.
+- Upstream: [swapdex v0.163.0](https://github.com/youdie006/swapdex/releases/tag/v0.163.0),
+  source `855e85c965bcf73907ec5d24033ac23704114836`,
+  [PR #30](https://github.com/youdie006/swapdex/pull/30).
+
 ## 2026-09-15: swapdex 0.162.0
 
 - Update swapdex 0.160.0 → 0.162.0 to restore Codex session search and resume
