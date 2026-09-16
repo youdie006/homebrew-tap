@@ -1,5 +1,20 @@
 # Changelog
 
+## 2026-09-16: swapdex 0.165.5
+
+- Update swapdex 0.165.4 → 0.165.5 so Codex profile jobs such as
+  `codex exec -p worker` use the selected serving account. Profile options no
+  longer bypass the managed OpenAI route; custom providers and explicit
+  provider overrides retain their routes. Existing direct jobs are not replayed.
+- Verify all four official archive URLs and SHA-256 values. Upstream Linux/macOS
+  PR and merged-source CI, all four release builds, 1,222 Rust tests and five
+  stock Codex loopback profile cases pass. Ruby syntax and exact formula
+  mappings are checked here; npm installation/runtime results belong to the
+  upstream release record. A full Homebrew installation is not claimed.
+- Upstream: [swapdex v0.165.5](https://github.com/youdie006/swapdex/releases/tag/v0.165.5),
+  source `4e2c8f552236dea7fc58f1ab7e109b906f244d03`,
+  [PR #39](https://github.com/youdie006/swapdex/pull/39).
+
 ## 2026-09-16: swapdex 0.165.4
 
 - Update swapdex 0.165.3 → 0.165.4 to keep a disconnected client from killing
