@@ -1,5 +1,19 @@
 # Changelog
 
+## 2026-09-17: swapdex 0.165.7
+
+- Update 0.165.6 to 0.165.7 so failed Claude usage reads retain their cause and
+  reading age, expired/paused accounts do not inflate capacity, and long notes
+  stay visible in narrow terminals with correct mouse selection.
+- Verify all four downloaded release archives against SHA-256 sidecars and
+  formula URL/checksum mappings. Upstream Linux/macOS CI, four release builds,
+  1,236 Rust tests and same-process quota recovery at 144/80 columns passed.
+- Ruby syntax and formula mapping checks cover this update. Target installations
+  use npm; a complete Homebrew install is not claimed.
+- Upstream: [swapdex v0.165.7](https://github.com/youdie006/swapdex/releases/tag/v0.165.7),
+  source `8d265e7dd63256bfc95e564b6bea94e00d693d90`,
+  [PR #41](https://github.com/youdie006/swapdex/pull/41).
+
 ## 2026-09-16: swapdex 0.165.5
 
 - Update swapdex 0.165.4 → 0.165.5 so Codex profile jobs such as
