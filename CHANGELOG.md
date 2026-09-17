@@ -1,5 +1,21 @@
 # Changelog
 
+## 2026-09-17: swapdex 0.165.8
+
+- Update 0.165.7 to 0.165.8 so supported open Claude sessions can renew through
+  one proven authentication source, pending source association cannot launch
+  an obsolete copy, and usage HTTP 429 is described as a limited usage lookup.
+- Verify all four downloaded release archives against SHA-256 sidecars and
+  formula URL/checksum mappings. Upstream Linux/macOS CI, all four release
+  builds, 1,276 Rust tests, native file-store renewal fixtures and launch/routing
+  regressions passed.
+- Ruby syntax and formula mapping checks cover this update. Target installations
+  use npm; a complete Homebrew install and live macOS Keychain renewal are not
+  claimed by this formula update.
+- Upstream: [swapdex v0.165.8](https://github.com/youdie006/swapdex/releases/tag/v0.165.8),
+  source `0befa438d0650dd0e24f9d05de4ac6657ffbc1ce`,
+  [PR #42](https://github.com/youdie006/swapdex/pull/42).
+
 ## 2026-09-17: swapdex 0.165.7
 
 - Update 0.165.6 to 0.165.7 so failed Claude usage reads retain their cause and
