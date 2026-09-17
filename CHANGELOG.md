@@ -1,5 +1,21 @@
 # Changelog
 
+## 2026-09-17: sessionwiki 0.29.0
+
+- Update 0.28.0 to 0.29.0 so external-adapter sessions remain readable in CLI,
+  MCP and web even while their original files exist. Built-in adapters retain
+  live parsing; custom adapters publish later changes through synchronization.
+- Include custom-adapter indexing, scoped deletion reconciliation, source-free
+  redacted brief rendering and quieter redirected synchronization logs.
+- Verify all four upstream archives against published SHA-256 sidecars and all
+  three formula URL/checksum mappings. Upstream PR/main CI, 220 Rust tests,
+  package verification and all four release builds passed.
+- Ruby syntax and diff checks cover this formula update. WSL/M3/M4 installation
+  and native runtime acceptance are recorded in the upstream release ledger.
+- Upstream: [sessionwiki v0.29.0](https://github.com/youdie006/sessionwiki/releases/tag/v0.29.0),
+  source `3eb4e72a102abead2e0e399022c840a574e179d3`,
+  [PR #28](https://github.com/youdie006/sessionwiki/pull/28).
+
 ## 2026-09-17: swapdex 0.165.9
 
 - Update 0.165.8 to 0.165.9 so a limited Claude usage lookup makes one request
