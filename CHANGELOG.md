@@ -1,5 +1,22 @@
 # Changelog
 
+## 2026-09-17: swapdex 0.165.9
+
+- Update 0.165.8 to 0.165.9 so a limited Claude usage lookup makes one request
+  and records a retry deadline shared by quota commands and proxy callers.
+  Restarting or concurrent reads no longer repeat the former four-request
+  burst; deferred reads preserve the age of the last successful usage figures.
+- Honor bounded Retry-After metadata with a 60-to-900-second local fallback.
+  Usage lookup coordination errors remain separate from login/network errors.
+- Verify all four downloaded archives against published SHA-256 sidecars and
+  formula mappings. Upstream Linux/macOS CI, all release builds, 1,292 Rust
+  tests and an isolated same-process picker recovery check passed.
+- Ruby syntax and formula mappings cover this update. Target installations use
+  npm; this formula update does not claim a full Homebrew installation.
+- Upstream: [swapdex v0.165.9](https://github.com/youdie006/swapdex/releases/tag/v0.165.9),
+  source `567f254bc38d1aaf6560fe4a12cee64b29ba7d68`,
+  [PR #43](https://github.com/youdie006/swapdex/pull/43).
+
 ## 2026-09-17: swapdex 0.165.8
 
 - Update 0.165.7 to 0.165.8 so supported open Claude sessions can renew through
