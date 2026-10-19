@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-10-19: swapdex 0.167.17
+
+- Update 0.167.16 to 0.167.17: `sync-mcp` merges into each account slot instead of
+  replacing its server list, and reads the bare `~/.claude.json` even when run
+  from inside a slot.
+- Formula URLs and SHA-256 values taken from the release's published `.sha256`
+  sidecars for all four archives.
+
 ## 2026-09-17: sessionwiki 0.29.0
 
 - Update 0.28.0 to 0.29.0 so external-adapter sessions remain readable in CLI,
