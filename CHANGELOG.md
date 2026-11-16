@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-11-16: swapdex 0.167.39
+
+- Update 0.167.38 to 0.167.39: `swapdex token <name>` keeps a Claude account
+  working past its sign-in's fixed end on a one-year `claude setup-token`
+  token, which the proxy's sweep puts in place of the login as the end arrives.
+- Formula URLs and SHA-256 values taken from the release's published `.sha256`
+  sidecars for all four archives, each checked against the downloaded archive.
+
 ## 2026-11-16: swapdex 0.167.38
 
 - Update 0.167.37 to 0.167.38: `swapdex shim` no longer pins the proxy
