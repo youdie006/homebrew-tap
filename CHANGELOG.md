@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-11-16: swapdex 0.167.38
+
+- Update 0.167.37 to 0.167.38: `swapdex shim` no longer pins the proxy
+  address into Claude's `settings.json`, removes the one older versions wrote,
+  and links accounts' own copies back to the shared settings file. Also ureq
+  3.5.0 to 3.5.1.
+- Formula URLs and SHA-256 values taken from the release's published `.sha256`
+  sidecars for all four archives, each checked against the downloaded archive.
+
 ## 2026-10-19: swapdex 0.167.17
 
 - Update 0.167.16 to 0.167.17: `sync-mcp` merges into each account slot instead of
